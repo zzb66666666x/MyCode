@@ -11,8 +11,7 @@ Java的实用工具类库java.util包。
 
 public class test {
     public static void main(String[] args){
-        Scanner in = new Scanner(System.in);
-
+        //Scanner in = new Scanner(System.in);
         //testing import 
         Hello.main(args);
 
@@ -38,6 +37,7 @@ public class test {
         //testing of if-else, while and for loops
         //two ways of computing factorial
         //int n = in.nextInt();
+        //in.close();
         int n = 15;
         int i = 1;
         int factorial = 1;
@@ -88,6 +88,5 @@ public class test {
         //test of array
         
 
-        in.close();
     }
 }
