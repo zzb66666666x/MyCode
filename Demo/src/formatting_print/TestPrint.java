@@ -1,8 +1,7 @@
 package formatting_print;
 
-public class test_print {
-    public static void main(String[] args)
-	{
+public class TestPrint {
+	public static void printall(){
 		String name = "盖伦";
 		int kill = 8;
 		String title = "超神";
@@ -32,5 +31,9 @@ public class test_print {
 		System.out.format("%.2f%n",Math.PI);
 		//小数点位数
         System.out.println("end of testing the formatting print");
+	}
+    public static void main(String[] args)
+	{
+		printall();
     }
 }
