@@ -1,18 +1,19 @@
 import hello.*;
 import java.util.Scanner;  
 import formatting_print.*; 
+import test_template.*;
 import clock.*;
 
 class TestClass{
     public int variable = 10;
 
-    public static void main(String[] args){
+    public static void main(final String[] args){
     }
 
     TestClass(){
     }
 
-    TestClass(int val){
+    TestClass(final int val){
         variable = val;
     }
 };
@@ -23,17 +24,17 @@ public class test {
         System.out.println("Inside the function f()");
     }
 
-    public static void swap_index(int[] array, int a, int b){
-        int temp = array[a];
+    public static void swap_index(final int[] array, final int a, final int b){
+        final int temp = array[a];
         array[a] = array[b];
         array[b] = temp;
     }
 
-    public static void main(String[] args){
+    public static void main(final String[] args){
         //Main program starts here
-        Scanner in = new Scanner(System.in);
+        final Scanner in = new Scanner(System.in);
         //testing import 
-        String helloinfo = Hello.getValue();
+        final String helloinfo = Hello.getValue();
         System.out.println(helloinfo);
         //error: helloclass.test();
         //testing input
@@ -90,22 +91,22 @@ public class test {
         //test of array
         System.out.printf("I am testing array in java now\n");
         //dynamic allocation of array
-        int [] array1 = new int[10];
-        int array2[] = new int[10]; 
+        final int [] array1 = new int[10];
+        final int array2[] = new int[10]; 
         array1[0] = 666;
         array2[0] = 6666;
         System.out.println(array1[0]);
         System.out.println(array2[0]);
         //static allocation of array
-        int array3 [] = new int[] {10,11,12,13};
-        int array4[] = {1,2,3,4,5};
+        final int array3 [] = new int[] {10,11,12,13};
+        final int array4[] = {1,2,3,4,5};
         System.out.println("array3 has [0] and [3] as "+array3[0]+","+array3 [3]);
         System.out.println("array4 has [0] and [4] as "+array4[0]+","+array4 [4]);
         System.out.println("array4 has length: " + array4.length);
 
         //new test of strings
         char c1 = '汉';	//Unicode编码，可以识别汉字
-        char c2 = 'h';
+        final char c2 = 'h';
 
         System.out.println(c1);
         System.out.println(c2);
@@ -119,8 +120,8 @@ public class test {
         System.out.println(c1);
 
         System.out.println("Conversion");
-        int temp = ('a' - 'A');
-        char testout = (char)('B'+ temp);
+        final int temp = ('a' - 'A');
+        final char testout = (char)('B'+ temp);
         System.out.println(testout);
         System.out.println((char)(80));
 
@@ -152,7 +153,7 @@ public class test {
 
         //test using functions 
         f();
-        int [] array = new int[] {1,2,3,4,5,6};
+        final int [] array = new int[] {1,2,3,4,5,6};
         swap_index(array, 0, 5);
         for (int i = 0; i<array.length; i++){
             System.out.printf("%d ",array[i]);
@@ -161,12 +162,21 @@ public class test {
 
 
         //test classes
-        TestClass test_class_ins = new TestClass(1000000);
+        final TestClass test_class_ins = new TestClass(1000000);
         System.out.println(test_class_ins.variable);
 
         //test clock
         System.out.println();
-        Clock clk = new Clock();
-        clk.start(100);
+        final Clock clk = new Clock();
+        clk.start(10);
+
+        //test of using template
+        //don't use int, use Integer to specify the type
+        //the type to specify the template should be the wrapper classes
+        pair<Integer,Float> p = new pair<Integer, Float>(1,1.1f);
+        p.show();
+
+        Foo foo = new Foo();
+        foo.<String>show("test", "ing...");
     };
 };
