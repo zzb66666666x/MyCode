@@ -9,6 +9,13 @@
             "name": "CodeLens (Launch) - TestClass",
             "request": "launch",
             "mainClass": "TestClass",
+            "projectName": "Demo_72c7b573"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - TestClass",
+            "request": "launch",
+            "mainClass": "TestClass",
             "projectName": "Demo_370e8193"
         },
         {

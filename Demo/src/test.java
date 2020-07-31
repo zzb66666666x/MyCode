@@ -1,4 +1,4 @@
-import hello.Hello;
+import hello.*;
 import java.util.Scanner;  
 import formatting_print.*; 
 import clock.*;
@@ -35,7 +35,7 @@ public class test {
         //testing import 
         String helloinfo = Hello.getValue();
         System.out.println(helloinfo);
-
+        //error: helloclass.test();
         //testing input
         // System.out.println("2+3="+5);
         // int price;
