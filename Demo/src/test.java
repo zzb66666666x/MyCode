@@ -178,5 +178,12 @@ public class test {
 
         Foo foo = new Foo();
         foo.<String>show("test", "ing...");
+
+        //generating array list with general type
+        //the class list is a non generic class but has generic member function
+        Double[] list1 = list.<Double>get(1.0,2.0,3.0,4.0,5.0);
+        for (int i = 0; i<list1.length;i++){
+            System.out.println(list1[i]);
+        }
     };
 };
